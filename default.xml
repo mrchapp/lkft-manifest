@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote fetch="https://bitbucket.org" name="bitbucket"/>
+  <remote fetch="https://github.com" name="github"/>
+  <remote fetch="http://git.linaro.org" name="linaro"/>
+  <remote fetch="git://git.openembedded.org" name="oe"/>
+  <remote fetch="http://git.shr-project.org" name="shr"/>
+  <remote fetch="https://git.yoctoproject.org" name="yocto"/>
+  
+  <default revision="dunfell" sync-j="4"/>
+  
+  <project name="git/poky" path="./" remote="yocto"/>
+
+  <project name="mrchapp/meta-lkft" path="./meta-lkft" remote="github" revision="poky/dunfell"/>
+
+  <project name="openembedded/meta-openembedded" path="./meta-openembedded" remote="github"/>
+
+  <project name="kraj/meta-clang" path="./meta-clang" remote="github" revision="46db90bf7ac1d7ab1078770423317071154c495c"/>
+
+  <!-- BSPs -->
+  <project name="96boards/meta-96boards" path="./meta-96boards" remote="github"/>
+  <project name="git/meta-arm" path="./meta-arm" remote="yocto" revision="master"/>
+  <project name="git/meta-freescale" path="./meta-freescale" remote="yocto"/>
+  <project name="git/meta-intel" path="./meta-intel" remote="yocto"/>
+  <project name="git/meta-ti" path="./meta-ti" remote="yocto" revision="e53bcaf45c1d984cffb579c3a557e56f6d95675b"/>
+  <project name="ndechesne/meta-qcom" path="./meta-qcom" remote="github" revision="master"/>
+</manifest>
