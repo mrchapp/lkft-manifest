@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote fetch="https://bitbucket.org" name="bitbucket"/>
+  <remote fetch="https://github.com" name="github"/>
+  <remote fetch="http://git.linaro.org" name="linaro"/>
+  <remote fetch="git://git.openembedded.org" name="oe"/>
+  <remote fetch="http://git.shr-project.org" name="shr"/>
+  <remote fetch="https://git.yoctoproject.org" name="yocto"/>
+  
+  <default revision="zeus" sync-j="4"/>
+  
+  <project name="git/poky" path="./" remote="yocto"/>
+
+  <project name="Linaro/meta-lkft" path="./meta-lkft" remote="github" revision="poky/zeus"/>
+
+  <project name="openembedded/meta-openembedded" path="./meta-openembedded" remote="github"/>
+
+  <project name="kraj/meta-clang" path="./meta-clang" remote="github"/>
+
+  <!-- BSPs -->
+  <project name="96boards/meta-96boards" path="./meta-96boards" remote="github"/>
+  <project name="git/meta-arm" path="./meta-arm" remote="yocto" revision="726e0b9618559a53b59061068c7406b966a79f66"/>
+  <project name="git/meta-freescale" path="./meta-freescale" remote="yocto"/>
+  <project name="git/meta-intel" path="./meta-intel" remote="yocto"/>
+  <project name="git/meta-ti" path="./meta-ti" remote="yocto"/>
+  <project name="ndechesne/meta-qcom" path="./meta-qcom" remote="github" revision="master"/>
+</manifest>
