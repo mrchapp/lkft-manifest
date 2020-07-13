@@ -45,6 +45,10 @@ if [ -v REPO_NAME ]; then
       fi
       ;;
   esac
+else
+  # Build latest released kernel
+  kernel_recipe="linux-generic-mainline"
+  kernel_recipe_version="git%"
 fi
 
 replace_with IMAGE_FSTYPES_remove "ext4 iso wic wic.gz wic.bmap"
