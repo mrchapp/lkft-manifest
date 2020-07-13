@@ -17,6 +17,12 @@
 
   <project name="kraj/meta-clang" path="./meta-clang" remote="github" revision="46db90bf7ac1d7ab1078770423317071154c495c"/>
 
+  <!-- LKFT scripts -->
+  <project name="mrchapp/lkft-manifest" path="./lkft-manifest" remote="github" revision="dunfell">
+    <linkfile dest="scripts/lkft-add-bblayers.sh" src="scripts/lkft-add-bblayers.sh"/>
+    <linkfile dest="scripts/lkft-add-local-conf.sh" src="scripts/lkft-add-local-conf.sh"/>
+  </project>
+
   <!-- BSPs -->
   <project name="96boards/meta-96boards" path="./meta-96boards" remote="github"/>
   <project name="git/meta-arm" path="./meta-arm" remote="yocto" revision="master"/>
