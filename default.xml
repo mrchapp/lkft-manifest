@@ -15,7 +15,7 @@
 
   <project name="openembedded/meta-openembedded" path="./meta-openembedded" remote="github"/>
 
-  <project name="kraj/meta-clang" path="./meta-clang" remote="github" revision="46db90bf7ac1d7ab1078770423317071154c495c"/>
+  <project name="kraj/meta-clang" path="./meta-clang" remote="github"/>
 
   <!-- LKFT scripts -->
   <project name="mrchapp/lkft-manifest" path="./lkft-manifest" remote="github" revision="dunfell">
