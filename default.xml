@@ -25,7 +25,7 @@
 
   <!-- BSPs -->
   <project name="96boards/meta-96boards" path="./meta-96boards" remote="github"/>
-  <project name="git/meta-arm" path="./meta-arm" remote="yocto" revision="master"/>
+  <project name="git/meta-arm" path="./meta-arm" remote="yocto"/>
   <project name="git/meta-freescale" path="./meta-freescale" remote="yocto"/>
   <project name="git/meta-intel" path="./meta-intel" remote="yocto"/>
   <project name="git/meta-ti" path="./meta-ti" remote="yocto" revision="f0371c25b8b210734d86b32d884af10a0279ea71"/>
