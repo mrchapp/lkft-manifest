@@ -51,7 +51,7 @@ else
   kernel_recipe_version="git%"
 fi
 
-replace_with IMAGE_FSTYPES_remove "ext4 iso wic wic.gz wic.bmap"
+replace_with IMAGE_FSTYPES_remove "ext4 iso wic wic.bmap wic.gz wic.xz"
 replace_with IMAGE_FSTYPES_append " ext4.gz tar.xz"
 if [ -v kernel_recipe ]; then
   echo "LKFT kernel recipe:  ${kernel_recipe}"
