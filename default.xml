@@ -11,7 +11,7 @@
   
   <project name="git/poky" path="." remote="yocto"/>
 
-  <project name="mrchapp/meta-lkft" path="meta-lkft" remote="github" revision="d/dunfell-20210607"/>
+  <project name="mrchapp/meta-lkft" path="meta-lkft" remote="github" revision="d/dunfell-20210614"/>
 
   <project name="openembedded/meta-openembedded" path="meta-openembedded" remote="github"/>
 
