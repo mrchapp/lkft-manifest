@@ -2,6 +2,7 @@
 <manifest>
   <remote fetch="https://bitbucket.org" name="bitbucket"/>
   <remote fetch="https://github.com" name="github"/>
+  <remote fetch="https://gitlab.com" name="gitlab"/>
   <remote fetch="http://git.linaro.org" name="linaro"/>
   <remote fetch="git://git.openembedded.org" name="oe"/>
   <remote fetch="http://git.shr-project.org" name="shr"/>
@@ -18,7 +19,7 @@
   <project name="kraj/meta-clang" path="meta-clang" remote="github"/>
 
   <!-- LKFT scripts -->
-  <project name="Linaro/lkft/rootfs/lkft-manifest" path="lkft-manifest" remote="github" revision="dunfell">
+  <project name="Linaro/lkft/rootfs/lkft-manifest" path="lkft-manifest" remote="gitlab" revision="dunfell">
     <linkfile dest="scripts/lkft-add-bblayers.sh" src="scripts/lkft-add-bblayers.sh"/>
     <linkfile dest="scripts/lkft-add-local-conf.sh" src="scripts/lkft-add-local-conf.sh"/>
   </project>
