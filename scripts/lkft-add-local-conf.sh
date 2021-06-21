@@ -38,16 +38,21 @@ if [ -v REPO_NAME ]; then
       ;;
     stable-rc)
       kernel_recipe="linux-generic-stable-rc"
-
-      if [ -v GIT_BRANCH ]; then
-        major_minor="$(echo "${GIT_BRANCH}" | sed -e 's#^linux-##' | cut -d\. -f1,2)"
-        kernel_recipe_version="${major_minor}+git%"
-      elif [ -v KERNEL_VERSION ]; then
-        kernel_recipe_version="${KERNEL_VERSION}+git%"
-      fi
       ;;
   esac
+elif [ -v KERNEL_RECIPE ]; then
+  kernel_recipe="${KERNEL_RECIPE}"
 fi
+
+if [ "${kernel_recipe}" = "linux-generic-stable-rc" ]; then
+  if [ -v GIT_BRANCH ]; then
+    major_minor="$(echo "${GIT_BRANCH}" | sed -e 's#^linux-##' | cut -d\. -f1,2)"
+    kernel_recipe_version="${major_minor}+git%"
+  elif [ -v KERNEL_VERSION ]; then
+    kernel_recipe_version="${KERNEL_VERSION}+git%"
+  fi
+fi
+
 if [ ! -v kernel_recipe ] || [ -z "${kernel_recipe}" ]; then
   kernel_recipe="linux-generic-mainline"
   kernel_recipe_version="git%"
