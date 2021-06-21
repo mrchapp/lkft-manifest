@@ -42,6 +42,8 @@ if [ -v REPO_NAME ]; then
       if [ -v GIT_BRANCH ]; then
         major_minor="$(echo "${GIT_BRANCH}" | sed -e 's#^linux-##' | cut -d\. -f1,2)"
         kernel_recipe_version="${major_minor}+git%"
+      elif [ -v KERNEL_VERSION ]; then
+        kernel_recipe_version="${KERNEL_VERSION}+git%"
       fi
       ;;
   esac
