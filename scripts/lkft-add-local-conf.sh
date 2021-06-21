@@ -52,17 +52,13 @@ if [ ! -v kernel_recipe ] || [ -z "${kernel_recipe}" ]; then
 fi
 
 if [ -v DISTRO ]; then
-  case "${DISTRO}" in
-    lkft | rpb)
-      if [ -v KERNEL_RECIPE ]; then  kernel_recipe="${KERNEL_RECIPE}"; fi
-      if [ -v KERNEL_VERSION ]; then kernel_recipe_version="${KERNEL_VERSION}"; fi
-      if [ -v SRCREV_kernel ]; then  LATEST_SHA="${SRCREV_kernel}"; fi
+  if [ -v KERNEL_RECIPE ]; then  kernel_recipe="${KERNEL_RECIPE}"; fi
+  if [ -v KERNEL_VERSION ]; then kernel_recipe_version="${KERNEL_VERSION}"; fi
+  if [ -v SRCREV_kernel ]; then  LATEST_SHA="${SRCREV_kernel}"; fi
 
-      if [ "${kernel_recipe_version}" = "git" ]; then
-        kernel_recipe_version="git%"
-      fi
-      ;;
-  esac
+  if [ "${kernel_recipe_version}" = "git" ]; then
+    kernel_recipe_version="git%"
+  fi
 fi
 
 replace_with IMAGE_FSTYPES_remove "ext4 iso wic wic.bmap wic.gz wic.xz"
