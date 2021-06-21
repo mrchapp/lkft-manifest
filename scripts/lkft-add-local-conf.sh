@@ -55,8 +55,11 @@ fi
 
 if [ -v DISTRO ]; then
   if [ -v KERNEL_RECIPE ]; then  kernel_recipe="${KERNEL_RECIPE}"; fi
-  if [ -v KERNEL_VERSION ]; then kernel_recipe_version="${KERNEL_VERSION}"; fi
   if [ -v SRCREV_kernel ]; then  LATEST_SHA="${SRCREV_kernel}"; fi
+
+  if [ -v KERNEL_VERSION ] && [ ! -v kernel_recipe_version ]; then
+    kernel_recipe_version="${KERNEL_VERSION}"
+  fi
 
   if [ "${kernel_recipe_version}" = "git" ]; then
     kernel_recipe_version="git%"
