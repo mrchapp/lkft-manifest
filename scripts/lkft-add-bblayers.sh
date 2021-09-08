@@ -36,3 +36,4 @@ bbl_add ../meta-intel
 bbl_add ../meta-freescale
 bbl_add ../meta-ti
 bbl_add ../meta-96boards
+bbl_add ../meta-raspberrypi

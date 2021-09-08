@@ -21,6 +21,7 @@
   </project>
   <project name="OSSystems/meta-browser" path="layers/meta-browser" remote="github" revision="3322d838f29be9a62eea8a846f0c6d4e86ccd0ae"/>
   <project name="advancedtelematic/meta-updater" path="layers/meta-updater" remote="github"/>
+  <project name="agherzan/meta-raspberrypi" path="layers/meta-raspberrypi" remote="github"/>
   <project name="cpriouzeau/meta-st-cannes2" path="layers/meta-st-cannes2" remote="github"/>
   <project name="git/meta-freescale" path="layers/meta-freescale" remote="yocto"/>
   <project name="git/meta-intel" path="layers/meta-intel" remote="yocto"/>
