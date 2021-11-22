@@ -83,4 +83,7 @@ if [ -v LATEST_SHA ]; then
     replace_with "SRCREV_kernel_${MACHINE}" "${LATEST_SHA}"
   fi
 fi
+for v in ${!SRCREV@}; do
+  replace_with "$v_${MACHINE}" "${!v}"
+done
 add_line INHERIT += \"buildstats buildstats-summary\"
