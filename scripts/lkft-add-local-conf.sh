@@ -87,6 +87,7 @@ for v in ${!SRCREV@}; do
   replace_with "${v}_${MACHINE}" "${!v}"
 done
 for v in ${!PREFERRED@}; do
+  echo "Replacing ${v} with ${!v}"
   replace_with "${v}" "${!v}"
 done
 add_line INHERIT += \"buildstats buildstats-summary\"
