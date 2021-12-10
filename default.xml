@@ -15,7 +15,7 @@
   <project name="96boards/oe-rpb-manifest" path="conf" remote="github" revision="lkft/sumo">
     <linkfile dest="setup-environment" src="setup-environment-internal"/>
   </project>
-  <project name="Linaro/lkft/rootfs/lkft-manifest" path="lkft-manifest" remote="gitlab">
+  <project name="mrchapp/lkft-manifest" path="lkft-manifest" remote="github" revision="d/ltpgit">
     <linkfile dest="scripts/lkft-add-bblayers.sh" src="scripts/lkft-add-bblayers.sh"/>
     <linkfile dest="scripts/lkft-add-local-conf.sh" src="scripts/lkft-add-local-conf.sh"/>
   </project>
