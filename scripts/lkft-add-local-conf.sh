@@ -83,6 +83,7 @@ if [ -v LATEST_SHA ]; then
     replace_with "SRCREV_kernel_${MACHINE}" "${LATEST_SHA}"
   fi
 fi
+set -x
 for v in ${!SRCREV@}; do
   replace_with "${v}_${MACHINE}" "${!v}"
 done
@@ -91,3 +92,7 @@ for v in ${!PREFERRED@}; do
   replace_with "${v}" "${!v}"
 done
 add_line INHERIT += \"buildstats buildstats-summary\"
+echo "---vvv---${LOCAL_CONF}---vvv---"
+cat "${LOCAL_CONF}"
+echo "---^^^---${LOCAL_CONF}---^^^---"
+set +x
