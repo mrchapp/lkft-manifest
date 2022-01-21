@@ -39,8 +39,8 @@ if [ -v REPO_NAME ]; then
     stable-rc)
       kernel_recipe="linux-generic-stable-rc"
 
-      if [ -v GIT_BRANCH ]; then
-        major_minor="$(echo "${GIT_BRANCH}" | sed -e 's#^linux-##' | cut -d\. -f1,2)"
+      if [ -v KERNEL_BRANCH ]; then
+        major_minor="$(echo "${KERNEL_BRANCH}" | sed -e 's#^linux-##' | cut -d\. -f1,2)"
         kernel_recipe_version="${major_minor}+git%"
       fi
       ;;
