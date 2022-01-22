@@ -36,7 +36,7 @@ if [ -v REPO_NAME ]; then
       kernel_recipe="linux-generic-next"
       kernel_recipe_version="git%"
       ;;
-    stable-rc)
+    linux-stable-rc)
       kernel_recipe="linux-generic-stable-rc"
 
       if [ -v KERNEL_BRANCH ]; then
