@@ -26,8 +26,8 @@ if [ ! -e "${LOCAL_CONF}" ]; then
   exit 1
 fi
 
-if [ -v REPO_NAME ]; then
-  case "${REPO_NAME}" in
+if [ -v KERNEL_REPO_NAME ]; then
+  case "${KERNEL_REPO_NAME}" in
     mainline)
       kernel_recipe="linux-generic-mainline"
       kernel_recipe_version="git%"
@@ -56,7 +56,7 @@ if [ -v DISTRO ]; then
     lkft | rpb)
       if [ -v KERNEL_RECIPE ]; then  kernel_recipe="${KERNEL_RECIPE}"; fi
       if [ -v KERNEL_VERSION ]; then kernel_recipe_version="${KERNEL_VERSION}"; fi
-      if [ -v SRCREV_kernel ]; then  LATEST_SHA="${SRCREV_kernel}"; fi
+      if [ -v SRCREV_kernel ]; then  KERNEL_SHA="${SRCREV_kernel}"; fi
 
       if [ "${kernel_recipe_version}" = "git" ]; then
         kernel_recipe_version="git%"
@@ -76,11 +76,11 @@ if [ -v kernel_recipe ]; then
     replace_with "PREFERRED_VERSION_${kernel_recipe}" "${kernel_recipe_version}"
   fi
 fi
-if [ -v LATEST_SHA ]; then
-  echo "LKFT kernel SHA:     ${LATEST_SHA}"
-  replace_with SRCREV_kernel "${LATEST_SHA}"
+if [ -v KERNEL_SHA ]; then
+  echo "LKFT kernel SHA:     ${KERNEL_SHA}"
+  replace_with SRCREV_kernel "${KERNEL_SHA}"
   if [ -v MACHINE ]; then
-    replace_with "SRCREV_kernel_${MACHINE}" "${LATEST_SHA}"
+    replace_with "SRCREV_kernel_${MACHINE}" "${KERNEL_SHA}"
   fi
 fi
 for v in ${!SRCREV@}; do
