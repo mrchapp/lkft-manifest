@@ -10,14 +10,14 @@
   
   <project name="git/poky" path="." remote="yocto"/>
 
-  <project name="Linaro/meta-lkft" path="meta-lkft" remote="github"/>
+  <project name="mrchapp/meta-lkft" path="meta-lkft" remote="github"/>
 
   <project name="openembedded/meta-openembedded" path="meta-openembedded" remote="github"/>
 
   <project name="kraj/meta-clang" path="meta-clang" remote="github"/>
 
   <!-- LKFT scripts -->
-  <project name="Linaro/lkft/rootfs/lkft-manifest" path="lkft-manifest" remote="gitlab">
+  <project name="mrchapp/lkft-manifest" path="lkft-manifest" remote="github">
     <linkfile dest="scripts/lkft-add-bblayers.sh" src="scripts/lkft-add-bblayers.sh"/>
     <linkfile dest="scripts/lkft-add-local-conf.sh" src="scripts/lkft-add-local-conf.sh"/>
   </project>
