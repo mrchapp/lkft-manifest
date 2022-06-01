@@ -71,8 +71,15 @@ if [ -v DISTRO ]; then
   fi
 fi
 
-replace_with IMAGE_FSTYPES_remove "ext4 iso wic wic.bmap wic.gz wic.xz"
-replace_with IMAGE_FSTYPES_append " ext4.gz tar.xz"
+replace_with IMAGE_FSTYPES:remove "ext4 iso wic wic.bmap wic.gz wic.xz"
+replace_with IMAGE_FSTYPES:append " ext4.gz tar.xz"
+replace_with DISTRO_FEATURES:remove "opengl"
+replace_with PACKAGECONFIG:remove:pn-qemu "sdl"
+replace_with EXTRA_IMAGEDEPENDS:remove:hikey "edk2-hikey burn-boot"
+replace_with MACHINE_ESSENTIAL_EXTRA_RDEPENDS:remove:hikey "edk2-hikey"
+replace_with MACHINE_HWCODECS:intel-core2-32 ""
+replace_with MACHINE_HWCODECS:intel-corei7-64 ""
+
 if [ -v kernel_recipe ]; then
   echo "LKFT kernel recipe:  ${kernel_recipe}"
   replace_with "PREFERRED_PROVIDER_virtual/kernel" "${kernel_recipe}"
@@ -86,7 +93,7 @@ if [ -v LATEST_SHA ]; then
   echo "LKFT kernel SHA:     ${LATEST_SHA}"
   replace_with SRCREV_kernel "${LATEST_SHA}"
   if [ -v MACHINE ]; then
-    replace_with "SRCREV_kernel_${MACHINE}" "${LATEST_SHA}"
+    replace_with "SRCREV_kernel:${MACHINE}" "${LATEST_SHA}"
   fi
 fi
 add_line INHERIT += \"buildstats buildstats-summary\"
