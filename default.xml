@@ -18,6 +18,7 @@
 
   <!-- LKFT scripts -->
   <project name="Linaro/lkft/rootfs/lkft-manifest" path="lkft-manifest" remote="gitlab">
+    <linkfile dest="lkft-init-oe.sh" src="scripts/lkft-init-oe.sh"/>
     <linkfile dest="scripts/lkft-add-bblayers.sh" src="scripts/lkft-add-bblayers.sh"/>
     <linkfile dest="scripts/lkft-add-local-conf.sh" src="scripts/lkft-add-local-conf.sh"/>
   </project>
