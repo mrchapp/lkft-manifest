@@ -74,6 +74,7 @@ fi
 replace_with IMAGE_FSTYPES:remove "ext4 iso wic wic.bmap wic.gz wic.xz"
 replace_with IMAGE_FSTYPES:append " ext4.gz tar.xz"
 replace_with DISTRO_FEATURES:remove "opengl"
+replace_with DISTRO_FEATURES:append " systemd"
 replace_with PACKAGECONFIG:remove:pn-qemu "sdl"
 replace_with EXTRA_IMAGEDEPENDS:remove:hikey "edk2-hikey burn-boot"
 replace_with MACHINE_ESSENTIAL_EXTRA_RDEPENDS:remove:hikey "edk2-hikey"
