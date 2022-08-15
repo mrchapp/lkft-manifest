@@ -79,6 +79,7 @@ replace_with EXTRA_IMAGEDEPENDS:remove:hikey "edk2-hikey burn-boot"
 replace_with MACHINE_ESSENTIAL_EXTRA_RDEPENDS:remove:hikey "edk2-hikey"
 replace_with MACHINE_HWCODECS:intel-core2-32 ""
 replace_with MACHINE_HWCODECS:intel-corei7-64 ""
+replace_with SECURITY_STACK_PROTECTOR:pn-ltp ""
 
 if [ -v kernel_recipe ]; then
   echo "LKFT kernel recipe:  ${kernel_recipe}"
