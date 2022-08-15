@@ -34,4 +34,3 @@ bbl_add ../meta-qcom
 bbl_add ../meta-arm/meta-arm-bsp ../meta-arm/meta-arm ../meta-arm/meta-arm-toolchain
 bbl_add ../meta-intel
 bbl_add ../meta-ti/meta-ti-bsp
-bbl_add ../meta-96boards

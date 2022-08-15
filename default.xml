@@ -24,7 +24,6 @@
   </project>
 
   <!-- BSPs -->
-  <project name="96boards/meta-96boards" path="meta-96boards" remote="github"/>
   <project name="git/meta-arm" path="meta-arm" remote="yocto"/>
   <project name="git/meta-intel" path="meta-intel" remote="yocto"/>
   <project name="git/meta-ti" path="meta-ti" remote="yocto"/>
