@@ -10,7 +10,7 @@
   
   <project name="git/poky" path="." remote="yocto"/>
 
-  <project name="Linaro/meta-lkft" path="meta-lkft" remote="github"/>
+  <project name="mrchapp/meta-lkft" path="meta-lkft" remote="github" revision="d/rtc-test"/>
 
   <project name="openembedded/meta-openembedded" path="meta-openembedded" remote="github"/>
 
